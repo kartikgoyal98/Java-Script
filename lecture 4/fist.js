@@ -125,16 +125,64 @@
 // GURGAON
 
 
-// For a given array with marks of students -> [85, 97, 44, 37, 76, 60]
-// Find the average marks of the entire class.
+// // For a given array with marks of students -> [85, 97, 44, 37, 76, 60]
+// // Find the average marks of the entire class.
 
-let arr = [85,97,44,37,76,60];
-let sum =0;
+// let arr = [85,97,44,37,76,60];
+// let sum =0;
 
-for(let i = 0;i<arr.length;i++){
-        sum = sum +arr[i];
-}
-let avg = sum /arr.length ;
-console.log("average of marks :", avg);   // average of marks : 66.5
+// for(let i = 0;i<arr.length;i++){
+//         sum = sum +arr[i];
+// }
+// let avg = sum /arr.length ;
+// console.log("average of marks :", avg);   // average of marks : 66.5
 
 
+
+// let marks = [85, 97, 44, 37, 76, 60];
+
+// let sum = 0;
+
+// for (let val of marks) {
+// sum += val;
+
+// }
+
+// let avg = sum / marks. length;
+// console. log (`avg marks of the class = ${avg}`);  // avg marks of the class = 66.5
+
+//------------------------------------------------------------------------------------------
+// For a given array with prices of 5 items -> [250, 645, 300, 900, 50]
+// All items have an offer of 10% OFF on them. Change the array to store final price after
+// applying offer.
+
+// let items = [250, 645, 300, 900, 50];
+
+// let i = 0;
+// for (let val of items){
+// let offer = val / 10;
+// items [i] = items[i] - offer;
+// console. log(`value after offer = ${items[i]}`);
+// i++;
+// }
+// console.log(items);
+
+
+
+// value after offer = 225
+// value after offer = 580.5
+// value after offer = 270
+// value after offer = 810
+// value after offer = 45
+// (5) [225, 580.5, 270, 810, 45]
+
+
+
+// let items = [250, 645, 300, 900, 50];
+// for (let i = 0; i < items. length; i++) {
+// let offer = items[i] / 10;
+// items [i] -= offer;
+
+// }
+
+// console. log(items);  // (5) [225, 580.5, 270, 810, 45]
