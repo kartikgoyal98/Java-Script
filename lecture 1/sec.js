@@ -47,7 +47,7 @@
 //-----------------------------------
 
 // use var keybord
-// var is not use in js
+// var is not use in modern js
 
 // var fullname = "kartik goyal";
 // console.log(fullname);  // op kartik goyal
@@ -144,7 +144,7 @@
 //------------------------------------------------
 
 // (2) NOn-Primitive Data type
-// NOn-Primitive Data type are mainly declair to const 
+// NOn-Primitive Data type are mainly declair to const
 
 // const student = {
 //     fullName : "kartik Goyal",
