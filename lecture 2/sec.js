@@ -1,4 +1,6 @@
 // Conditional Statements
+
+//----------------------------
 // if Statement
 
 // let age =25;
@@ -6,6 +8,7 @@
 //     console.log("you can vote");  // you can vote
 // }
 
+//-----------------
 // let age =16;
 // if(age >= 18){
 //     console.log("you can vote");
@@ -14,6 +17,7 @@
 //     console.log("you cannot vote");  //you cannot vote
 // }
 
+//------------------------
 // let mode = "dark";
 // let colour;
 // if(mode === "dark"){
@@ -24,6 +28,7 @@
 // }
 // console.log(colour);   // black
 
+//-------------------------------------
 // let mode = "light";
 // let colour;
 // if(mode === "dark"){
@@ -48,6 +53,7 @@
 // }
 // console.log(colour);   // white
 
+//----------------------------------
 // let mode = "blue";
 // let colour;
 
@@ -59,6 +65,7 @@
 // }
 // console.log(colour);   // white
 
+//----------------------------------
 // let age =25;
 
 // if(age >= 18){
@@ -68,6 +75,7 @@
 //     console.log("you cannot vote");  //you can vote
 // }
 
+//----------------------------------------------------------
 // let num = 10;
 // if(num % 2 === 0){
 //     console.log(num,"is even");  //10 'is even'
@@ -104,8 +112,8 @@
 
 // let age = 25;
 
-// let result = age >= 18 ? "adult" : "not adult";     //adult
-// console. log(result);
+// let result = age >= 18 ? "adult" : "not adult";
+// console. log(result); //adult
 
 // let age = 16;
 // age >= 18 ? console. log("adult") : console. log("not adult");  // not adult
@@ -114,7 +122,7 @@
 // Let‘s Practice
 
 // Qs1. Get user to input a number using prompt(“Enter a number:”).
-// Check if the number isa multiple of 5 or not.
+// Check if the number is a multiple of 5 or not.
 
 // let Name = prompt("hello!");   // prompt is ues input to user
 // console.log(Name);   //kartik goyal
@@ -157,7 +165,6 @@
 // }
 
 // 89 'Grade B'
-
 
 // let score = 62;
 // let grade;
