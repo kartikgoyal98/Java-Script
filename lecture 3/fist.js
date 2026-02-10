@@ -21,6 +21,7 @@
 // }
 // console.log("loop has ended");   // loop has ended
 
+//-------------------------------------------------------
 // //Calculate sum of 1 to 5
 // let sum = 0;
 // for (let i = 1; i <= 5; i++) {
@@ -68,6 +69,7 @@
 
 //----------------------------------------------------
 // do-while Loop
+// do while loop run at least one time
 
 // let i = 20;
 // do {
@@ -106,7 +108,7 @@
 
 // let size = 0;
 // for (let val of str) {
-// console. log("i=", i);
+// console. log("i=", val);
 // size++;
 
 // }
@@ -133,6 +135,7 @@
 // cgpa
 // isPass
 
+//-----------------------------------
 // let student = {
 //   name: "Rahul Kumar",
 //   age: 20,
@@ -141,7 +144,7 @@
 // };
 
 // for (let key in student) {
-//   console.log("key=", key, " value=", student[key]);
+//   console.log("key=", key, " value=", student[key]);  // use student.key
 // }
 
 // key= name  value= Rahul Kumar
