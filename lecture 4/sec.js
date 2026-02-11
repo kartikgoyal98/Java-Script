@@ -1,7 +1,7 @@
 //-----------------------------------------
 // array methods
 
-// // Push( ) : add to end
+// // Push( ) : add to end element in array, push are change the original array
 
 // let foodItems =["potato","apple","litchi","tomato"];
 // console.log(foodItems);  // (4) ['potato', 'apple', 'litchi', 'tomato']
@@ -11,7 +11,7 @@
 // console.log(foodItems);  // (7) ['potato', 'apple', 'litchi', 'tomato', 'chips', 'burger', 'paneer']
 
 //----------------------------------------------------------------------------------------------------------
-// Pop( ) : delete from end & return
+// Pop( ) : delete from end & return the element ,pop are change the original array
 
 // let foodItems =["potato","apple","litchi","tomato"];
 // console.log(foodItems);  // (4) ['potato', 'apple', 'litchi', 'tomato']
@@ -22,7 +22,7 @@
 // console.log("deleted item is :",deletedItem);  // deleted item is : litchi
 
 //----------------------------------------------------------------------------------------------------------
-// toString( ) : converts array to string
+// toString( ) : they are use to converts array to string
 
 // let foodItems = ["potato", "apple", "litchi", "tomato"];
 // console. log(foodItems);  // (4) ['potato', 'apple', 'litchi', 'tomato']
@@ -36,6 +36,7 @@
 
 //---------------------------------------------------------------------------
 // Concat( ) : joins multiple arrays & returns result
+// they can not change original array,they are return new result(array)
 
 // let marvelHeroes = ["thor", "spiderman", "ironman"];
 // let dcHeroes = ["superman", "batman"];
@@ -60,7 +61,7 @@
 // console. log(heroes);  // (7) ['thor', 'spiderman', 'ironman', 'superman', 'batman', 'shaktiman', 'krish']
 
 // ------------------------------------------------------------------------------------------------------------
-// Unshift( ) : add to start
+// Unshift( ) : add elemen to start in array
 
 // let foodItems =["potato","apple","litchi","tomato"];
 // console.log(foodItems);  // (4) ['potato', 'apple', 'litchi', 'tomato']
@@ -124,6 +125,8 @@
 // console.log(arr.splice());   // []   // no change in array
 // console.log(arr);  // (7) [1, 2, 3, 4, 5, 6, 7]
 
+
+//-------------------------------------------------------------------------------------------------
 // Create an array to store companies -> “Bloomberg”,“Microsoft”,“Uber”,“Google”,“IBM”,“Netflix”
 // a. Remove the first company from the array
 // b. Remove Uber & Add Ola in its place
