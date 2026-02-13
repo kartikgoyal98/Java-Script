@@ -2,13 +2,13 @@
 
 // function 
 
-// function myFunction() {
-// console. log("Welcome to Apna College!");
-// console. log ("We are learning JS ") ;
-// }
+function myFunction() {
+console. log("Welcome to Apna College!");
+console. log ("We are learning JS ") ;
+}
 
-// myFunction();
-// myFunction();
+myFunction();
+myFunction();
 
 // Welcome to Apna College!
 // We are learning JS
