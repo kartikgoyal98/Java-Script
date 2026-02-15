@@ -2,16 +2,12 @@
 
 // function 
 
-function myFunction() {
-console. log("Welcome to Apna College!");
-console. log ("We are learning JS ") ;
-}
-
-
-
-
-myFunction();
-myFunction();
+// function myFunction() {
+// console. log("Welcome to Apna College!");
+// console. log ("We are learning JS ") ;
+// }
+// myFunction();
+// myFunction();
 
 // Welcome to Apna College!
 // We are learning JS
@@ -31,6 +27,9 @@ myFunction();
 // console. log (msg*n) ;
 // }
 // myFunction("i love js" , 100);  // NaN // this is error , not a number
+
+
+
 
 
 // function sum(x,y){

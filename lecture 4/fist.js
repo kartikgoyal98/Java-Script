@@ -72,6 +72,15 @@
 // shaktiman
 // spiderman
 
+
+
+let heroes = ["ironman", "thor", "hulk", "shaktiman", "spiderman"];
+
+for (let hero of heroes)
+console.log(hero);
+
+
+
 //-------------------------------------------------------------
 // using for-of loop
 // gernaly use to print array use for-of loop
