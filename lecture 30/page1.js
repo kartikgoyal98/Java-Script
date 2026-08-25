@@ -111,3 +111,131 @@
 
 // console.log("hello"/5); //NaN
 // console.log(typeof NaN); //number
+
+
+
+// ----------------------------------------------------------------
+// conditionals
+
+// const isLoggedIn = true;
+
+// if (isLoggedIn) {
+//   console.log("You can like, comment");
+// } else {
+//   console.log("Please first login");
+// }
+
+// You can like, comment
+
+// let temp = 40;
+
+// if (temp >= 25) {
+//   console.log("Ac chala do");
+// } else {
+//   console.log("Acc mat chalao");
+// }
+
+// Ac chala do
+
+// let day = "monday";
+
+// if (day === "monday") {
+//   console.log("1st day of the week");
+// } else if (day === "tuesday") {
+//   console.log("2nd day of the week");
+// } else if (day === "wed") {
+//   console.log("3rd day of the week");
+// } else if (day === "thu") {
+//   console.log("4th day of the week");
+// } else if (day === "fri") {
+//   console.log("5th day of the week");
+// } else if (day === "sat") {
+//   console.log("6th day of the week");
+// } else if (day === "sun") {
+//   console.log("7th day of the week");
+// } else {
+// console. log("Wrong day");
+//  }
+
+// 1st day of the week
+
+// ----------------------------------------------------------------
+// nested if else jio hotstar
+
+// const isLoggedIn = true;
+// const isSubscribed = false;
+
+// if (isLoggedIn) {
+// if (isSubscribed) {
+// console. log("You can access premium content.");
+// } else {
+// console. log("You dont have anu premium plan to access this content.")
+// }
+// } else {
+// console.log("Please login");
+// }
+
+// You dont have anu premium plan to access this content.
+
+// ----------------------------------------------------------------
+// switch case
+
+// switch (exprection not condtion)
+
+// const day = "fri";
+
+// switch (day) {
+//   case "mon":
+//     console.log("1st day of the week");
+//   case "tue":
+//     console.log("2nd day of the week");
+//   case "wed":
+//     console.log("3rd day of the week");
+//   case "thu":
+//     console.log("4th day of the week");
+//   case "fri":
+//     console.log("5th day of the week");
+//   case "sat":
+//     console.log("6th day of the week");
+//   case "sun":
+//     console.log("7th day of the week");
+//   default:
+//     console.log("Wrong day");
+// }
+
+// 5th day of the week
+// 6th day of the week
+// 7th day of the week
+// Wrong day
+
+// use brack in this code
+
+// const day = "fri";
+
+// switch (day) {
+//   case "mon":
+//     console.log("1st day of the week");
+//     break;
+//   case "tue":
+//     console.log("2nd day of the week");
+//     break;
+//   case "wed":
+//     console.log("3rd day of the week");
+//     break;
+//   case "thu":
+//     console.log("4th day of the week");
+//     break;
+//   case "fri":
+//     console.log("5th day of the week");
+//     break;
+//   case "sat":
+//     console.log("6th day of the week");
+//     break;
+//   case "sun":
+//     console.log("7th day of the week");
+//     break;
+//   default:
+//     console.log("Wrong day");
+// }
+
+// 5th day of the week
