@@ -25,7 +25,7 @@
 // 2
 // 3
 // 4
-// 5
+// 5cds
 
 // --------------------------------------------
 // while loop
@@ -139,12 +139,10 @@
 // totalMarks("Karan", 54, 23, 65);
 // totalMarks("Anu", 54, 52, 23);
 
-
 // Alok total marks : 125
 // Addi total marks : 90
 // Karan total marks : 142
 // Anu total marks : 129
-
 
 // function greetingMsg(userName, greetings){
 // console.log(`${greetings}, ${userName}`);
@@ -160,8 +158,6 @@
 // Namaste, Satyam
 // Kemcho, Saif
 
-
-
 // function calculator(num1, num2, operator) {
 //     switch (operator) {
 //         case "+":
@@ -174,13 +170,10 @@
 
 // calculator(4 , 5 , "-");    //4 - 5 = -1
 
-
 // ctrl +shift +l  select all similer item
-
 
 // --------------------------------------------------------------
 // default parameter
-
 
 // function greetingMsg(userName = "Guest", greetings = "hi"){
 // console.log(`${greetings}, ${userName}`);
@@ -197,7 +190,6 @@
 // nashte, Satyam
 // hi, Saif
 // hi, Guest
- 
 
 // -------------------------------------------------------------------------------
 
@@ -205,9 +197,8 @@
 // console.log(`${greetings}, ${userName}`);
 // }
 
-// greetingMsg("Priyanshu" , "Hii" , 34 ,234)      //Hii, Priyanshu 
+// greetingMsg("Priyanshu" , "Hii" , 34 ,234)      //Hii, Priyanshu
 // // remaning arguments are ignore
-
 
 // -------------------------------------------------------------------------------
 // function totalMarks(mathMarks, scienceMarks, sanskritMarks) {
@@ -224,10 +215,8 @@
 // let percentage = calPercentage("Alok", 46, 56, 23)
 // console.log(percentage);
 
-
 // // Alok percentage : 41.66666666666667
 // // 41.66666666666667
-
 
 // ------------------------------------------------------
 
@@ -256,4 +245,80 @@
 // undefined           // by becouse log() function are use and they are not return anything
 
 // -------------------------------------------------------------------------------
-// 
+// function expression
+
+// question function declaraction and function expression difference
+
+// let add = function (num1, num2) {
+//   return num1 + num2;
+// };
+
+// let result = add(5, 7);
+// console.log(result);    //12
+
+// ---------------
+// function expression
+
+// let add = function (num1, num2) {
+//   return num1 + num2;
+// };
+
+// console.log(add(5, 7));    //12
+
+// -----------------------
+// function declaraction
+
+// fun1()                      // in c++  java they are give error    , i use the fun before function declaraction they are not possibse in c++ java
+// function fun1(){
+//     console.log("function declaration");    //function declaration
+// }
+
+// they are posible in function declaraction using hoisting conspect
+
+// but they conspect are not possible in function expression
+
+// console.log(add(5, 7));    //error
+
+// let add = function (num1, num2) {
+//   return num1 + num2;
+// };
+
+// they are give error
+// ReferenceError: Cannot access 'add' before initialization
+
+// -------------------------------------------------------------------------------
+// arrow function
+
+// let add = (num1, num2) => {
+// return num1 + num2
+// }
+
+// console.log(add(4, 6));     //10
+
+// --------------------------------------
+// console.log(add(4, 6));     //same they are give error
+
+// let add = (num1, num2) => {
+// return num1 + num2
+// }
+
+// --------------------------------------------------
+// three way to write arrow function
+
+// // syntax 1
+// let add = num1 => num1 + 4;
+// console.log(add(4, 6));     //8
+
+// // syntax 2
+// let add = (num1, num2) => num1 + num2;
+// console.log(add(4, 6));     //10
+
+// // synatax 3
+// let add = (num1, num2) => {
+//     // something
+//     // something
+//     return num1 + num2
+// };
+// console.log(add(4, 6));     //10
+
+// function are return dydefault undefine in js
