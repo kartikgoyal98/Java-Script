@@ -107,3 +107,41 @@
 // productName iphone 25 pro max
 // printProductName [Function: printProductName]
 // printDiscount [Function: printDiscount]
+
+
+// ------------------------------------------------------------------------
+// spread operater
+
+// let product1 = [56835, 4.5, 75, 10, "iphone"]
+// const [n,p] = ["iphone", 56835, 4.5, 75, 10]
+
+// let arr = [53, 15, 626, 7, 43, 57, 23, 54, 752, 43]
+
+// console.log(Math.min(53, 15, 626, 7, 43, 57, 23, 54, 752, 43)); //7
+// console.log(Math.min([53, 15, 626, 7, 43, 57, 23, 54, 752, 43])); //NaN
+// console.log(Math.min(arr)); //NaN
+
+// console.log(arr);
+// [
+//   53, 15, 626,   7, 43,
+//   57, 23,  54, 752, 43
+// ]
+
+// apply spread
+// console.log(...arr);
+// 53 15 626 7 43 57 23 54 752 43
+
+// console.log(Math.min(...arr)); //7
+// sperad operater are use when you unbox , unpacking , opening speradeing element
+
+// also use to merge
+
+// let a = [1, 2]
+// let b = [3, 4]
+
+// let c = [a,b]
+// console.log(c); //[ [ 1, 2 ], [ 3, 4 ] ]
+
+// let c = [...a, ...b] // array merging by spread operator
+// console.log(c); //[ 1, 2, 3, 4 ]
+// console.log(...c); //1 2 3 4
