@@ -271,3 +271,94 @@
 // };
 
 // console.log(student.address?.city); //Jaipur
+
+
+// -------------------------------------------------
+// using splice
+// they are change in origanal array
+
+// let arr = [1,2,3,4,5,6]
+// console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
+// arr.pop();
+// console.log(arr);   //[ 1, 2, 3, 4, 5 ]
+// arr.push(6);
+// console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
+// arr.shift();
+// console.log(arr);   //[ 2, 3, 4, 5, 6 ]
+// arr.unshift(1);
+// console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
+
+// arr.splice(2);
+// console.log(arr);   //[ 1, 2 ]
+
+// arr.splice(2,2);     // they are use delete
+// console.log(arr);   //[ 1, 2, 5, 6 ]
+
+// arr.splice(2,0,1);      // they are use add
+// console.log(arr);   //[ 1, 2, 5, 6 ]
+
+// [
+//   1, 2, 1, 3,
+//   4, 5, 6
+// ]
+
+// arr.splice(2,0,"hello");      // they are use add
+// console.log(arr);   //[ 1, 2, 'hello', 3, 4, 5, 6 ]
+
+// arr.splice(2,4,"kartik");      // they are use replace
+// console.log(arr);   //[ 1, 2, 'hello', 3, 4, 5, 6 ]
+
+// -------------------------------------------------
+// using slice
+// they are not change in origanal array
+
+// use mutability and immutability conspect
+
+// let arr = [1,2,3,4,5,6]
+
+// let trime =arr.slice(0,4);
+// console.log(trime);   //[ 1, 2, 3, 4 ]
+
+// let trime =arr.slice(3,5);
+// console.log(trime);   //[ 4, 5 ]
+
+// let trime =arr.slice(0);
+// console.log(trime);   //[ 1, 2, 3, 4, 5, 6 ]
+
+// -------------------------------------------------
+
+// let arr = [1,2,3,4,5,6]
+
+// console.log(arr.indexOf(4));    //3
+// console.log(arr.indexOf(43));    //-1 // not present in array
+
+// find method
+// they are use to find element in array based on condition
+// they give fist element to satisy condition
+
+// let arr = [1,2,3,4,5,6 , 3]
+
+// let res = arr.find((value) => {
+//     return value
+// })
+// console.log(res);   //1
+
+// let res = arr.find((value) => {
+//     return value === 3;
+// })
+// console.log(res);   //3
+
+// let res = arr.find((value) => {
+//     return value === "3";
+// })
+// console.log(res);   //undefined
+
+// let resIndex = arr.findIndex((value) => {
+//     return value === 3;
+// })
+// console.log(resIndex);  //2
+
+// let resIndex = arr.findIndex((value) => {
+//     return value === "3";
+// })
+// console.log(resIndex);  //-1
