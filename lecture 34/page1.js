@@ -399,3 +399,35 @@
 //   1, 2, 3, 4,  5,
 //   6, 7, 8, 9, 10
 // ]
+
+// -------------------------------------------------
+// mutability and immutability
+
+// mutability = they are change in origanal varible
+// splice,pop,unshift ,shift push
+
+// immutability
+// slice
+// /they are return new array
+
+// let arr4 = [4, 5, 6, 62, 213, 13]
+// let arrCopy = arr4;
+// arrCopy.pop()
+
+// console.log("arr4",arr4);
+// console.log("arrCopy",arrCopy);
+
+// arr4 [ 4, 5, 6, 62, 213 ]
+// arrCopy [ 4, 5, 6, 62, 213 ]
+
+// solution of the mutability is sperade
+
+// let arr4 = [4, 5, 6, 62, 213, 13]
+// let arrCopy = [...arr4];
+// arrCopy.pop()
+
+// console.log("arr4",arr4);
+// console.log("arrCopy",arrCopy);
+
+// arr4 [ 4, 5, 6, 62, 213, 13 ]
+// arrCopy [ 4, 5, 6, 62, 213 ]
