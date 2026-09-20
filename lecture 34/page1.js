@@ -235,3 +235,39 @@
 
 // console.log(obj);   //{ name: 'kasturi', rollNo: 23, address: null }
 // console.log(obj.address);   //null
+
+// -------------------------------------------------
+// Optional Chaining (?.)
+
+// const obj = {
+//   name: "kasturi",
+//   rollNo: 23,
+// };
+
+// console.log(obj?.address);   //undefined
+
+// let student = {
+//     name: "Varad"
+// };
+
+// console.log(student.address);//undefined
+
+// let student = {
+//     name: "Varad"
+// };
+
+// console.log(student.address.city);//error
+// TypeError: Cannot read properties of undefined (reading 'city')
+
+// use Optional Chaining
+// they are work in thired levle
+// console.log(student.address?.city);//undefined
+
+// let student = {
+//     name: "Varad",
+//     address: {
+//         city: "Jaipur"
+//     }
+// };
+
+// console.log(student.address?.city); //Jaipur
