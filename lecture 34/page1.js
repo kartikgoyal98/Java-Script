@@ -272,7 +272,6 @@
 
 // console.log(student.address?.city); //Jaipur
 
-
 // -------------------------------------------------
 // using splice
 // they are change in origanal array
@@ -431,3 +430,114 @@
 
 // arr4 [ 4, 5, 6, 62, 213, 13 ]
 // arrCopy [ 4, 5, 6, 62, 213 ]
+
+// -------------------------------------------------
+// map , filter , reduce methods
+// they all are immutable , all are array methods
+
+// -------------------------------------------------
+// map method
+// map return new array of n length
+
+// let originalPrices = [463, 654, 2346]
+
+// let discountedPrices = []
+
+// for(value of originalPrices){
+//     // let discount = value * 10 / 100
+//     // discountedPrices.push(value  - discount) // 10% discount
+//     discountedPrices.push(value  * 0.9) // 10% discount
+// }
+
+// using for each loop
+// // originalPrices.forEach((value) => {
+// //     discountedPrices.push(value * 0.9) // 10% discount
+// // })
+
+// console.log(originalPrices);
+// console.log(discountedPrices);
+
+// [ 463, 654, 2346 ]
+// [ 416.7, 588.6, 2111.4 ]
+
+// using map
+
+// let originalPrices = [463, 654, 2346]
+
+// const discountedPrices = originalPrices.map((value) => {
+//     return value * 0.9
+// })
+
+// console.log(originalPrices);
+// console.log(discountedPrices);
+
+// [ 463, 654, 2346 ]
+// [ 416.7, 588.6, 2111.4 ]
+
+// this is array of object
+
+// let students = [
+//     {
+//         name: "Ayaan",
+//         marks: 56,
+//     },
+//     {
+//         name: "Mansi",
+//         marks: 46,
+//     },
+//     {
+//         name: "Debadrita",
+//         marks: 33,
+//     },
+//     {
+//         name: "Shivan",
+//         marks: 30,
+//     },
+//     {
+//         name: "Alauddin",
+//         marks: 28
+//     }
+// ]
+
+// let studentNames = []
+
+// students. forEach((value) => {
+// studentNames.push(value.name)
+// })
+// console.log(studentNames);
+// [ 'Ayaan', 'Mansi', 'Debadrita', 'Shivan', 'Alauddin' ]
+
+// short way
+
+// const studentNames = students.map((student) => {
+// return student. name
+// })
+
+// console.log(studentNames);
+// // [ 'Ayaan', 'Mansi', 'Debadrita', 'Shivan', 'Alauddin' ]
+
+// const studentMarks = students.map((student) => student.marks)
+// console.log(studentNames, studentMarks);
+// // [ 'Ayaan', 'Mansi', 'Debadrita', 'Shivan', 'Alauddin' ] [ 56, 46, 33, 30, 28 ]
+
+// // rest operater ko last me write karte ha , splite ko phale use karshate ha
+// let boostedMarks = students.map((student) => {
+//     return {...student , marks : student.marks + 10}
+// })
+
+// // let boostedMarks = students.map(student => ({ ...student, marks: student.marks + 10 }))
+
+// map are not take condition
+// let boostedMarks = students.map(student => student.marks < 33)  // [ false, false, false, true, true ]
+
+// filter are return true value not return false value
+
+// console.log(boostedMarks);
+
+// [
+//   { name: 'Ayaan', marks: 66 },
+//   { name: 'Mansi', marks: 56 },
+//   { name: 'Debadrita', marks: 43 },
+//   { name: 'Shivan', marks: 40 },
+//   { name: 'Alauddin', marks: 38 }
+// ]
