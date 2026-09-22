@@ -541,3 +541,71 @@
 //   { name: 'Shivan', marks: 40 },
 //   { name: 'Alauddin', marks: 38 }
 // ]
+
+// -----------------------------------------------------------
+// filter
+
+// let students = [
+//   {
+//     name: "Ayaan",
+//     marks: 56,
+//   },
+//   {
+//     name: "Mansi",
+//     marks: 46,
+//   },
+//   {
+//     name: "Debadrita",
+//     marks: 33,
+//   },
+//   {
+//     name: "Shivan",
+//     marks: 30,
+//   },
+//   {
+//     name: "Alauddin",
+//     marks: 28,
+//   },
+// ];
+
+// using for each method
+
+// let failedStudents = [];
+// students.forEach((student) => {
+//   if (student.marks < 33) {
+//     failedStudents.push(student);
+//   }
+// });
+
+// console.log(failedStudents);
+// [ { name: 'Shivan', marks: 30 }, { name: 'Alauddin', marks: 28 } ]
+
+// let failedStudents = [];
+// students.forEach((student) => {
+//   if (student.marks < 33) {
+//     // failedStudents.push(student.marks); //[ 30, 28 ]
+//     // failedStudents.push(student.name); //[ 'Shivan', 'Alauddin' ]
+//   }
+// });
+// console.log(failedStudents);
+
+// using filter
+
+// const failedStudents = students.filter((student) => student.marks < 33);
+// console.log(failedStudents);
+
+// [ { name: 'Shivan', marks: 30 }, { name: 'Alauddin', marks: 28 } ]
+
+//filter ak use krke agar hmko names hi dikhane h marks nhi to sir
+
+// const failedStudentsName  = failedStudents.map((student) => student.name)
+// console.log(failedStudents,failedStudentsName);
+
+// [ { name: 'Shivan', marks: 30 }, { name: 'Alauddin', marks: 28 } ] [ 'Shivan', 'Alauddin' ]
+
+// ----------------------------------------
+// chaining
+// process = filter -> map -> reduce
+
+// const failedStudents = students.filter((student) => student.marks < 33).map((student) => student.name)
+// console.log(failedStudents);    //[ 'Shivan', 'Alauddin' ]
