@@ -609,3 +609,95 @@
 
 // const failedStudents = students.filter((student) => student.marks < 33).map((student) => student.name)
 // console.log(failedStudents);    //[ 'Shivan', 'Alauddin' ]
+
+// -----------------------------------------------------------
+// reduce
+
+// they are take n length array and return single value(array , number , object, boolean)
+
+// let marks = [56, 24, 62, 73, 78]
+// let totalMarks = 0
+
+// marks.forEach((mark) => totalMarks += mark)
+// console.log(totalMarks); //293
+
+// using reduce
+
+// syntex
+// const totalMarks = marks.reduce( (accumulator , currentValue) => {}, 0)
+
+// 0 is the default value , accumulator value = 0 , initial value
+
+// let marks = [56, 24, 62, 73, 78];
+
+// const totalMarks = marks.reduce((accumulator, currentValue) => {
+//   accumulator = accumulator + currentValue;
+//   return accumulator;
+// }, 0);
+
+// console.log(totalMarks); //293
+
+// let marks = [56, 24, 62, 73, 78];
+
+// const totalMarks = marks.reduce((totalMarks, mark) => {
+//     return totalMarks + mark
+// }, 0)
+
+// const totalMarks = marks.reduce((totalMarks , mark) =>   totalMarks + mark)     // they are set by defalt assine  0 value , they are only array not object
+// console.log(totalMarks); //293
+
+// const totalMarks = marks.reduce((totalMarks , mark) =>   totalMarks + mark , 0)
+// console.log(totalMarks); //293
+
+// let students = [
+//   {
+//     name: "Ayaan",
+//     marks: 56,
+//   },
+//   {
+//     name: "Mansi",
+//     marks: 46,
+//   },
+//   {
+//     name: "Debadrita",
+//     marks: 33,
+//   },
+//   {
+//     name: "Shivan",
+//     marks: 30,
+//   },
+//   {
+//     name: "Alauddin",
+//     marks: 28,
+//   },
+// ];
+
+// const totalMarks = students.reduce((totalMarks, student) => totalMarks + student.marks, 0)
+// console.log(totalMarks); //193
+
+// const attendence = ["present", "present", "absent", "present", "absent"];
+
+// -> { present : 3 , absent : 2 }
+
+// let obj = {}
+
+// attendence.forEach((value) => {
+
+//     if (obj[value]) {
+//         obj[value] = obj[value] + 1
+//     } else {
+//         obj[value] = 1
+//     }
+
+// })
+
+// console.log(obj);   //{ present: 3, absent: 2 }
+
+// by reduce
+
+// const obj = attendence.reduce((acc, value) => {
+//   acc[value] = (acc[value] || 0) + 1;
+//   return acc;
+// }, {});
+
+// console.log(obj); //{ present: 3, absent: 2 }
