@@ -129,3 +129,214 @@
 // btn.setAttribute("disabled","true")
 // let res = btn.getAttribute("disabled")
 // console.log(res);   //true
+
+// -----------------------------------------------------------------
+// creating , appending , removing element
+
+// backend se data array of object ke form aa raha hota ha
+
+// ----------------------------------------
+// let div = document.createElement("div")
+// div.textContent = "Hello"
+// console.log(div);
+
+// let body = document.querySelector("body");
+// console. log(body);
+// // body.appendChild(div);
+// // body.append(div);
+
+// -----------
+// appendChild and append   differnce
+// its append in the last
+
+// let div1 = document.createElement("div")
+// let div2 = document.createElement("div")
+// div1.textContent = "div 1"
+// div2.textContent = "div 2"
+// let body = document.querySelector("body");
+
+// body.appendChild(div1);          // only pass node
+// body.appendChild(div2);
+
+// body.append(div1,div2);  // insert in last of body       // you can pass hole string
+// body.append("kartik");  // insert in last of body       // you can pass hole string
+// body.prepend(div1,div2); // insert in start of body
+
+// ------------------------
+
+// let they all data are come to backend and show to frantend
+
+// let products = [
+//     {
+//         name: "Iphone 20",
+//         price: 12342,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         name: "Samsung 15",
+//         price: 62324,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         name: "MI 23",
+//         price: 35354,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         name: "Poco 10",
+//         price: 43534,
+//         imgUrl:
+//             "https://m.media-amazon.com/images/I/41D9TUZxXwL._SY300_SX300_QL70_FMwebp_.jpg",
+//     },
+//     {
+//         name: "Lava 12",
+//         price: 53422,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+// ];
+
+// let productList = document.querySelector("#product-list");
+// console. log(productList);
+
+// products.forEach((product) => {
+//   console.log(product);
+// });
+
+// products.forEach((product) => {
+//   const card = document.createElement("p");
+//   card.textContent = `${product.name} - ${product.price}`;
+//   productList.append(card);
+// });
+
+// ------------------------------------------
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) =>{
+// const card = document.createElement("div");
+// card.classList.add("singleProduct");
+
+// const upperDiv = document.createElement("div")
+// const lowerDiv = document.createElement("div")
+
+// const img = document.createElement("img")
+
+// img.setAttribute("src" , "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg")
+
+// upperDiv.append(img)
+
+// card.append(upperDiv)
+
+// productList.append(card)
+
+// })
+
+// ------------------------------------------
+// another way
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.innerHTML = `<div>
+// <img src="https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg" alt="">
+// </div>
+// <div class="productDetail">
+// <p>Iphone 16 pro</p>
+// <p>143243</p>
+// </div> `;
+
+//     productList.append(card);
+// });
+
+// ------------------------------------------
+// how can update the data
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.innerHTML = `<div>
+// < <img src=${product.imgUrl} alt="">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     productList.append(card);
+// });
+
+// ------------------------------------------
+// remove element
+
+// fist way
+// let h2 = document.querySelector("#h23")
+// let body = document.querySelector("body");
+// body.removeChild(h2) // you have to perform on parent
+
+// sec way
+// let h2 = document.querySelector("#h23")
+// h2.remove() // directly on the element you want to remove
+
+// ------------------------------------------
+// clone node
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.innerHTML = `<div>
+// < <img src=${product.imgUrl} alt="">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     productList.append(card);
+// });
+
+// let clone = productList.cloneNode();
+// console.log(clone);
+
+// let clone = productList.cloneNode(true);
+// console.log(clone);
+
+// let clone = productList.cloneNode(true);
+// let body = document.querySelector("body");
+// body.append(clone)
+
+// ------------------------------------------
+// insert
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.innerHTML = `<div>
+// < <img src=${product.imgUrl} alt="">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     productList.append(card);
+// });
+
+// console.log(productList);
+// console.log(productList.children);
+
+// const items = productList.children
+// let h2 = document.querySelector("#h23")
+// productList.insertBefore(h2 , items[2]) // for precise positioning
+// items[2].before(h2)
+// items[2].after(h2)
