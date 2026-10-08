@@ -60,7 +60,7 @@
 //---------------------------------------
 
 // Variable can be re-declared & updated., this is the problem of var
-// they are not give me error
+// they are not give error
 // this is not correct way to write code
 
 // var age = 24;
@@ -171,9 +171,9 @@
 
 // const fname = "rahul";
 // fname = "kumar";  // op give error Assignment to constant variable.
-// // they can not change constant variable  but inside the keys of constant object you if you can change the object
+// // they can not change constant variable  but inside the keys of constant object you can change the object
 
-// // but yah error not give
+// // but they are not give error
 // const student = {
 //     fullName : "kartik Goyal",
 //     age : 20,

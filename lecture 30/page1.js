@@ -112,8 +112,6 @@
 // console.log("hello"/5); //NaN
 // console.log(typeof NaN); //number
 
-
-
 // ----------------------------------------------------------------
 // conditionals
 
@@ -166,13 +164,13 @@
 // const isSubscribed = false;
 
 // if (isLoggedIn) {
-// if (isSubscribed) {
-// console. log("You can access premium content.");
+//   if (isSubscribed) {
+//     console.log("You can access premium content.");
+//   } else {
+//     console.log("You dont have anu premium plan to access this content.");
+//   }
 // } else {
-// console. log("You dont have anu premium plan to access this content.")
-// }
-// } else {
-// console.log("Please login");
+//   console.log("Please login");
 // }
 
 // You dont have anu premium plan to access this content.

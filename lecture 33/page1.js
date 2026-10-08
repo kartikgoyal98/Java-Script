@@ -10,6 +10,7 @@
 // console.log(typeof product1);   //object
 
 // in objects
+// in object key is allbase string
 
 // let product2 = {
 //     price: 57633,           // price is key , 57633 are value of key
@@ -38,6 +39,7 @@
 // }
 
 // console.log(product2.printProductName());   //iphone 25 pro max
+// console.log(product2.printProductName);   //[Function: printProductName]
 // console.log(product2.printDiscount);    //[Function: printDiscount]
 // console.log(product2.price);    //57633
 
@@ -83,7 +85,7 @@
 //     price: 57633,
 //     avgRating: 4.5,
 //     first_name : "kartik",   // they are valid syntex
-//     // first-name : "kartik"   // they are not valid syntex  , solution is write in ""
+//     // last-name : "kartik"   // they are not valid syntex  , solution is write in ""
 //     "last-name" : "goyal"
 // };
 
@@ -142,7 +144,7 @@
 //     }
 // }
 
-// // outside the object they are function and inside the object they are method.
+// // function = outside the object they are function and inside the object they are method.
 // let res = product2.printProductName();      // function
 // console.log(res);
 
@@ -150,16 +152,9 @@
 // 345678
 
 // let product2 = {
-//     price: 57633,
-//     avgRating: 4.5,
-//     totalRevies: 75,
-//     discount: 10,
 //     productName: "Iphone 18 pro max",
 //     printProductName: function() {
 //         console.log(productName);
-//     },
-//     printDiscount() {
-//         console.log("10%");
 //     }
 // }
 
@@ -173,9 +168,6 @@
 // ----------------------------------------------
 
 // let product2 = {
-//     price: 57633,
-//     avgRating: 4.5,
-//     totalRevies: 75,
 //     discount: 50,
 //     productName: "iphone 25 pro max",
 //     printProductName : function(){
@@ -189,12 +181,9 @@
 // product2.printDiscount();   //50
 // product2.printProductName() //iphone 25 pro max
 
-// this keybord current object ko batata ha
+// this keybord are pointed to current object
 
 // let product2 = {
-//     price: 57633,
-//     avgRating: 4.5,
-//     totalRevies: 75,
 //     discount: 50,
 //     productName: "iphone 25 pro max",
 //     printProductName : function(){
@@ -304,15 +293,15 @@
 
 // --------------------------------------------------
 
-// function b(num) {
-//     console.log(num);
-//     num()
-//     console.log("b");
-// }
+function b(num) {
+    console.log(num);
+    num()
+    console.log("b");
+}
 
-// b(function a() {            // this is callback function
-//     console.log("a");
-// })
+b(function a() {            // this is callback function
+    console.log("a");
+})
 
 // a
 // b

@@ -1,7 +1,7 @@
 // lecture 34
 
 // ----------------------------------------------------------
-// destructuring of the objectrevision
+// destructuring of the object revision
 
 // let student = {
 //     name: "varad",
@@ -9,7 +9,7 @@
 //     subjects: ["math", "english", "hindi"],
 // }
 
-// order meter nahi kar ta object me
+// order meter nahi karta object me
 
 // let {subjects,name,rollNo} = student
 // console.log(subjects);      //[ 'math', 'english', 'hindi' ]
@@ -81,7 +81,7 @@
 //     totalMarks : 600    // over ride
 // }
 
-// let { subjects: vidhay,totalMarks = 500,...variable } = student
+// let { subjects: vidhay,totalMarks = 500,...variable } = student          //totalMarks = 500 , they are set defaultly
 // console.log(totalMarks);    //600
 
 // -----------------------------------------------------------------
@@ -172,6 +172,7 @@
 // arr[1] = "update"
 // console.log(arr);   //[ 1, 'update', 3, 4 ]
 
+// --------------------------------
 // for object
 
 // let obj = {
@@ -272,6 +273,15 @@
 
 // console.log(student.address?.city); //Jaipur
 
+// let student = {
+//     name: "Varad",
+//     address: {
+//         city: "Jaipur",
+//     }
+// };
+
+// console.log(student.address?.pin); //undefined
+
 // -------------------------------------------------
 // using splice
 // they are change in origanal array
@@ -287,25 +297,30 @@
 // arr.unshift(1);
 // console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
 
+// let arr = [1,2,3,4,5,6]
 // arr.splice(2);
 // console.log(arr);   //[ 1, 2 ]
 
+// let arr = [1,2,3,4,5,6]
 // arr.splice(2,2);     // they are use delete
 // console.log(arr);   //[ 1, 2, 5, 6 ]
 
+// let arr = [1,2,3,4,5,6]
 // arr.splice(2,0,1);      // they are use add
-// console.log(arr);   //[ 1, 2, 5, 6 ]
+// console.log(arr);   
 
 // [
 //   1, 2, 1, 3,
 //   4, 5, 6
 // ]
 
+// let arr = [1,2,3,4,5,6]
 // arr.splice(2,0,"hello");      // they are use add
 // console.log(arr);   //[ 1, 2, 'hello', 3, 4, 5, 6 ]
 
+// let arr = [1,2,3,4,5,6]
 // arr.splice(2,4,"kartik");      // they are use replace
-// console.log(arr);   //[ 1, 2, 'hello', 3, 4, 5, 6 ]
+// console.log(arr);   //[ 1, 2, 'kartik' ]
 
 // -------------------------------------------------
 // using slice
@@ -317,6 +332,7 @@
 
 // let trime =arr.slice(0,4);
 // console.log(trime);   //[ 1, 2, 3, 4 ]
+// console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
 
 // let trime =arr.slice(3,5);
 // console.log(trime);   //[ 4, 5 ]
@@ -331,27 +347,70 @@
 // console.log(arr.indexOf(4));    //3
 // console.log(arr.indexOf(43));    //-1 // not present in array
 
+// -------------------------------------------------
 // find method
+// In JavaScript, the find() method is used to find the "first element" in an array that satisfies a condition.
+
+// Syntax
+// array.find(function(element) {
+//     return condition;
+// });
+
 // they are use to find element in array based on condition
 // they give fist element to satisy condition
 
-// let arr = [1,2,3,4,5,6 , 3]
 
+// Example 1: Find a number
+// let arr = [10, 20, 30, 40, 50];
+
+// let result = arr.find(function(num) {
+//     return num > 25;
+// });
+// console.log(result);     //30
+
+
+// Example 2: Using arrow function
+
+// let arr = [10, 20, 30, 40, 50];
+// let result = arr.find(num => num > 25);
+// console.log(result);    //30
+
+// Example 3: If nothing is found
+
+// let arr = [10, 20, 30];
+// let result = arr.find(num => num > 100);
+// console.log(result);    //undefined
+
+// find() with objects
+
+// let students = [
+//     { name: "Rahul", age: 20 },
+//     { name: "Kartik", age: 21 },
+//     { name: "Aman", age: 22 }
+// ];
+
+// let student = students.find(s => s.name === "Kartik");
+// console.log(student);   //{ name: 'Kartik', age: 21 }
+
+// let arr = [1,2,3,4,5,6,3]
 // let res = arr.find((value) => {
 //     return value
 // })
 // console.log(res);   //1
 
+// let arr = [1,2,3,4,5,6,3]
 // let res = arr.find((value) => {
 //     return value === 3;
 // })
 // console.log(res);   //3
 
+// let arr = [1,2,3,4,5,6,3]
 // let res = arr.find((value) => {
-//     return value === "3";
+//     return value === "3";       // 3 are string
 // })
 // console.log(res);   //undefined
 
+// -----------------------------------------------
 // let resIndex = arr.findIndex((value) => {
 //     return value === 3;
 // })
@@ -363,7 +422,9 @@
 // console.log(resIndex);  //-1
 
 // -------------------------------------------------
-// flat
+// flat method
+
+// The flat() method is used to remove nested arrays and create a single-level array.
 
 // let arr = [1,2,3,4,5,6];
 // console.log(arr);   //[ 1, 2, 3, 4, 5, 6 ]
@@ -461,8 +522,45 @@
 // [ 416.7, 588.6, 2111.4 ]
 
 // using map
+// The map() method is used to create a new array by changing each element of an existing array.
+// Basic syntax:
+// let newArray = array.map(function(element) {
+//     return something;
+// });
+
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.map(function(num) {
+//     return num * 2;
+// });
+// console.log(result);        //[ 2, 4, 6, 8, 10 ]
+
+// // Using arrow function
+// let arr = [1, 2, 3, 4, 5];
+// let result = arr.map(num => num * 2);
+// console.log(result);        //[ 2, 4, 6, 8, 10 ]
+
+// Important: Original array is not changed
+
+// let arr = [1, 2, 3];
+// let result = arr.map(num => num * 10);
+// console.log(arr);
+// console.log(result);
+
+// [ 1, 2, 3 ]
+// [ 10, 20, 30 ]
+
+// map() with objects      
+
+// let students = [                             // this is array of object
+//     { name: "Kartik", marks: 80 },
+//     { name: "Rahul", marks: 90 },
+//     { name: "Aman", marks: 70 }
+// ];
+// let names = students.map(student => student.name);
+// console.log(names);     //[ 'Kartik', 'Rahul', 'Aman' ]
 
 // let originalPrices = [463, 654, 2346]
+// let discountedPrices = []
 
 // const discountedPrices = originalPrices.map((value) => {
 //     return value * 0.9
@@ -474,6 +572,7 @@
 // [ 463, 654, 2346 ]
 // [ 416.7, 588.6, 2111.4 ]
 
+// -------------------------------------------
 // this is array of object
 
 // let students = [
@@ -524,13 +623,7 @@
 // let boostedMarks = students.map((student) => {
 //     return {...student , marks : student.marks + 10}
 // })
-
 // // let boostedMarks = students.map(student => ({ ...student, marks: student.marks + 10 }))
-
-// map are not take condition
-// let boostedMarks = students.map(student => student.marks < 33)  // [ false, false, false, true, true ]
-
-// filter are return true value not return false value
 
 // console.log(boostedMarks);
 
@@ -541,6 +634,12 @@
 //   { name: 'Shivan', marks: 40 },
 //   { name: 'Alauddin', marks: 38 }
 // ]
+
+// map are not take condition
+// let boostedMarks = students.map(student => student.marks < 33)  // [ false, false, false, true, true ]
+
+// filter are return true value not return false value
+
 
 // -----------------------------------------------------------
 // filter
@@ -589,7 +688,16 @@
 // });
 // console.log(failedStudents);
 
+// ----------------------------------------------
 // using filter
+
+// The filter() method is used to select elements from an array based on a condition.
+// It creates a new array containing only the elements for which the condition is true.
+
+// Basic syntax
+// let newArray = array.filter(function(element) {
+//     return condition;
+// });
 
 // const failedStudents = students.filter((student) => student.marks < 33);
 // console.log(failedStudents);
@@ -603,6 +711,29 @@
 
 // [ { name: 'Shivan', marks: 30 }, { name: 'Alauddin', marks: 28 } ] [ 'Shivan', 'Alauddin' ]
 
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let result = arr.filter(function(num) {
+//     return num > 3;
+// });
+// console.log(result);     //[4, 5, 6]
+
+
+// Using arrow function
+// let arr = [1, 2, 3, 4, 5, 6];
+// let result = arr.filter(num => num > 3);
+// console.log(result);
+
+// [4, 5, 6]
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let even = arr.filter(num => num % 2 === 0);
+// console.log(even);       //[2, 4, 6]
+
+// let names = ["Kartik", "Rahul", "Aman", "Raj"];
+// let result = names.filter(name => name.length > 4);
+// console.log(result);        //[ 'Kartik', 'Rahul' ]
+
 // ----------------------------------------
 // chaining
 // process = filter -> map -> reduce
@@ -614,6 +745,50 @@
 // reduce
 
 // they are take n length array and return single value(array , number , object, boolean)
+
+// The reduce() method is used to combine all elements of an array into a single value.
+// For example:
+// - Add all numbers → one total
+// - Find maximum → one number
+// - Count something → one value
+// - Build an object → one object
+
+// Basic syntax
+
+// let result = arr.reduce(function(accumulator, currentValue) {
+//     return updatedValue;
+// }, initialValue);
+
+
+// let arr = [1, 2, 3, 4, 5];
+// let sum = arr.reduce(function(acc, num) {
+//     return acc + num;
+// }, 0);
+// console.log(sum);   //15
+
+// Using arrow function
+// The same code can be written more shortly:
+
+// let arr = [1, 2, 3, 4, 5];
+// let sum = arr.reduce((acc, num) => acc + num, 0);
+// console.log(sum);   //15
+
+
+// let arr = [1, 2, 3, 4];
+// let result = arr.reduce((acc, num) => {
+//     return acc * num;
+// }, 1);
+// console.log(result);    24
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let a = arr.map(x => x * 2);
+// let b = arr.filter(x => x > 3);
+// let c = arr.reduce((acc, x) => acc + x, 0);
+
+// console.log(a); // [2, 4, 6, 8, 10]
+// console.log(b); // [4, 5]
+// console.log(c); // 15
 
 // let marks = [56, 24, 62, 73, 78]
 // let totalMarks = 0
@@ -676,9 +851,6 @@
 // console.log(totalMarks); //193
 
 // const attendence = ["present", "present", "absent", "present", "absent"];
-
-// -> { present : 3 , absent : 2 }
-
 // let obj = {}
 
 // attendence.forEach((value) => {

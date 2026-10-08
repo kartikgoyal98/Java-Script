@@ -24,13 +24,13 @@
 // let lastIndex = products.length - 1;
 // console.log(products[lastIndex]);   //shoes
 
+// last se -1 se index start ho ta ha
 // console.log(products.at(-4));   //tshirt
 
 // for(let i=0; i < products.length; i++){
 // console. log(products[i]);
 // }
 
-// tshirt
 // tshirt
 // lower
 // cap

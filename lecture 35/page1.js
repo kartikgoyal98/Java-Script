@@ -17,7 +17,7 @@
 // -----------------------------------------------------
 // Block Scope
 
-// block use is multiple js stement are reap in a single block of code
+// block use is multiple js stament are reap in a single block of code
 
 // if (true) {
 //   console.log("hello");
@@ -123,7 +123,7 @@
 // let are block scope , i can not access let outside the block scope
 // const are block scope , i can not access const outside the block scope
 
-// variable use in code prority is , const -> let -> var(not use in code)
+// variable use in code prority is , const > let > var(not use in code)
 
 // function counter(){
 //     let count = 0

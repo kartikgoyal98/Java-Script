@@ -14,6 +14,10 @@
 // > console.log("hello kartik");
 // hello kartik
 // undefined
+
+// Why undefined appears?
+// console.log() prints the value, but it does not return a value.
+
 // > 352+23332
 // 23684
 
@@ -132,7 +136,7 @@
 // console. log(greetingMessage);  //Hii, Manu
 
 // const userName = "Manu"
-// const greetingMessage = `Hii, ${ console. log("nested console. log") }`
+// const greetingMessage = `Hii, ${ console. log("nested console. log") }`         //But console.log() returns undefined. // `Hii, ${undefined}`
 // console. log(greetingMessage);
 
 // nested console. log

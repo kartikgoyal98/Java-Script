@@ -3,12 +3,17 @@
 // -----------------------------------------------------------------
 // Builtin objects
 
+// Built-in objects are objects that JavaScript provides automatically. 
+// You can use them without creating them yourself.
+
 // function convertToPositiveNumber(num){
 //     return num * -1 ;
 // }
 // let positiveNum = convertToPositiveNumber(-10)
 
 // console.log(positiveNum);   //10
+
+// -------------------------------------------------------
 
 // let positiveNum2 = Math.abs(-10)
 // console.log(positiveNum2);      //10
@@ -20,7 +25,7 @@
 
 // console.log(Math.sqrt(25));     //5
 
-// console.log(Math.min(2,4,1,4,3,5,-6,7));    //-1
+// console.log(Math.min(2,4,1,4,3,5,-6,7));    //-6
 // console.log(Math.max(5,2,6,3,6,3,2,6,3,6,79,4));    //79
 
 // console.log(Math.round(5.6));   //6
@@ -57,8 +62,8 @@
 // console.log(Number.isFinite(435));     //true
 
 // console.log("56");      // 56 // they give string
-// console.log(Number.parseInt("56")); // 56 // they give number
-// console.log(Number.parseInt("a")); // NaN // they give number
+// console.log(Number.parseInt("56")); // 56 // they give number  // they are conver string to number 
+// console.log(Number.parseInt("a")); // NaN 
 
 // let num1 = "45"; // backend
 // let num2 = "75"; // backend is aai hai
@@ -69,11 +74,15 @@
 // console.log(num.toFixed());     //50
 // console.log(num.toFixed(1));    //49.8
 
+// toPrecision() is used to format a number to a specified number of significant digits.
+// let num1 = 123.456;
+// console.log(num1.toPrecision(4));   //123.5
+
 // let num1 = 49.7524652266
 // console.log(num1.toPrecision());    //49.7524652266
-// console.log(num1.toPrecision(0));    //49.7524652266
+// // console.log(num1.toPrecision(0));    //49.7524652266
 // console.log(num1.toPrecision(1));    //5e+1
-// console.log(num1.toPrecision(3));    //49.8
+// console.log(num1.toPrecision(5));    //49.752
 
 // ----------------------------------------------------------
 // use in string

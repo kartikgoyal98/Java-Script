@@ -17,6 +17,8 @@
 // -------------------------------
 // hoisting me variables & function declaration top per chale jate hai and you can use before declaraction and inalication
 
+
+// Hoisting is JavaScript's behavior where declarations are processed before the code is executed.
 // let , var , const are hoisted variable
 
 // function addNum() {
@@ -55,6 +57,7 @@
 //   console.log("function expression");
 // };
 
+// hoisted mean memory me variable create ho gane
 // -------------------------------------------------------
 // how is js code executed (revision)
 
@@ -64,6 +67,7 @@
 // -------------------------------------------------------
 // temporal dead zone
 // variable creation se leker initialization tak ke bech ke time ko temporal dead zone kahate ha
+// they are mainly let and const
 
 // console.log(a); //undefined
 // var a = 5;
@@ -133,11 +137,10 @@
 //   }
 //   return printCity  //  they are return function
 // }
-
 // let printCity = random();
 // console.log(printCity); //[Function: printCity]
-
 // printCity() 
+
 // Varanasi
 
 // -------------------------------
@@ -231,6 +234,17 @@
 // inner()
 // nishant
 
+// function outter(){
+//     let username = "nishant"   
+//     function inner(){         // ye go function ha iske pase inske variable ke informaction ho te and and apne parent envirement ke informaction ho te ha
+//         console.log(username);
+//     }
+//     return inner
+// }
+
+// const inner = outter()
+// console.log(inner);     //[Function: inner]
+
 // fark nahi karta ke aap function ko kaha call karareho , fark parta ha ham function kaha par return ha ra ha
 
 
@@ -242,6 +256,7 @@
 // }
 
 // const inner = outter()
+// console.log(inner);         //[Function: inner]
 // let username = "dhruv"
 // inner()
 // // dhruv

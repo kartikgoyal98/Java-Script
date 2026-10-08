@@ -124,7 +124,7 @@
 // Qs1. Get user to input a number using prompt(“Enter a number:”).
 // Check if the number is a multiple of 5 or not.
 
-// let Name = prompt("hello!");   // prompt is ues input to user
+// let Name = prompt("hello!");   // prompt is use input to user
 // console.log(Name);   //kartik goyal
 
 // let number = prompt("enter the number ");  // 8
