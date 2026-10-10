@@ -222,3 +222,233 @@
 
 // --------------------------------------------
 // prevent Default
+
+// --------------------------------------------
+// Event Delegation
+
+// how can remove product
+
+// let products = [
+//     {
+//         id: "1",
+//         name: "Iphone 20",
+//         price: 12342,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         id: "2",
+//         name: "Samsung 15",
+//         price: 62324,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         id: "3",
+//         name: "MI 23",
+//         price: 35354,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+//     {
+//         id: "4",
+//         name: "Poco 10",
+//         price: 43534,
+//         imgUrl:
+//             "https://m.media-amazon.com/images/I/41D9TUZxXwL._SY300_SX300_QL70_FMwebp_.jpg",
+//     },
+//     {
+//         id: "5",
+//         name: "Lava 12",
+//         price: 53422,
+//         imgUrl: "https://m.media-amazon.com/images/I/61knPJtYRpL._SX679_.jpg",
+//     },
+// ];
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     const dltBtn = document.createElement("button");
+//     dltBtn.textContent = "Remove product"
+
+//     // your code is correct but you put EventListener in every item , solution is Event Delegation
+//     dltBtn.addEventListener("click", (e) => {
+//         e.stopPropagation()
+//         card.remove()
+//     })
+
+//     card.innerHTML = `<div>
+// <img src="${product.imgUrl}" alt="${product.name}">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     card.append(dltBtn);
+//     productList.append(card);
+// });
+
+// --------------------------------------------
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     const dltBtn = document.createElement("button");
+//     dltBtn.textContent = "Remove product";
+
+//     card.innerHTML = `<div>
+// <img src="${product.imgUrl}" alt="${product.name}">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     card.append(dltBtn);
+//     productList.append(card);
+// });
+
+// // productList.addEventListener("click", (e) => {
+// //   e.stopPropagation();
+// // //   console.log("hii");
+// // //   console.log(e.target);
+// // //   console.log(e.target.parentElement);
+// // });
+
+// productList.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//     console.log(e.target.parentElement);
+//     console.log(e.target.tagName);
+//     if (e.target.tagName === "BUTTON") {
+//         e.target.parentElement.remove();
+//     }
+// });
+
+// // --------------------------------------------
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     const dltBtn = document.createElement("button");
+//     const addToCartBtn = document.createElement("button");
+//     dltBtn.textContent = "Remove product";
+//     addToCartBtn.textContent = "Add to cart"
+
+//     card.innerHTML = `<div>
+// <img src="${product.imgUrl}" alt="${product.name}">
+// </div>
+// <div class="productDetail">
+//  <p>${product.name}</p>
+// <p>${product.price}</p>
+// </div> `;
+
+//     card.append(dltBtn);
+//     card.append(addToCartBtn)
+//     productList.append(card);
+// });
+
+// productList.addEventListener("click", (e) => {
+//     e.stopPropagation();
+//     console.log(e.target.parentElement);
+//     console.log(e.target.tagName);
+//     console.log(e.target.textContent);
+//     // if (e.target.tagName === "BUTTON") {
+//     //     e.target.parentElement.remove();
+//     // }
+
+//     // if (e.target.textContent === "Remove product") {
+//     //     e.target.parentElement.remove()
+//     // }
+
+//      if (e.target.textContent === "Remove product" && e.target.tagName === "BUTTON") {
+//         e.target.parentElement.remove()
+//     }
+// });
+
+// --------------------------------------------
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.dataset.productId = product.id;
+//     const dltBtn = document.createElement("button");
+//     const addToCartBtn = document.createElement("button");
+//     dltBtn.textContent = "Remove product";
+//     addToCartBtn.textContent = "Add to cart"
+
+//         card.innerHTML = `<div>
+//     <img src="${product.imgUrl}" alt="${product.name}">
+//     </div>
+//     <div class="productDetail">
+//     <p>${product.name}</p>
+//     <p>${product.price}</p>
+//     </div> `;
+
+//     card.append(dltBtn);
+//     card.append(addToCartBtn)
+//     productList.append(card);
+// });
+
+// productList.addEventListener("click", (e) => {
+//     e.stopPropagation();
+
+//     const dltBtn = e.target;
+//     console.log(dltBtn.parentElement);
+//     console.log(dltBtn.tagName);
+//     console.log(dltBtn.textContent);
+
+//      console.log(dltBtn.parentElement.dataset.productId);
+//     if (dltBtn.textContent === "Remove product" && dltBtn.tagName === "BUTTON") {
+//         dltBtn.parentElement.remove()
+//     }
+// });
+
+// --------------------------------------------
+
+// let productList = document.querySelector("#product-list");
+
+// products.forEach((product) => {
+//     const card = document.createElement("div");
+//     card.classList.add("singleProduct");
+
+//     card.dataset.productId = product.id;
+//     const dltBtn = document.createElement("button");
+//     const addToCartBtn = document.createElement("button");
+//     dltBtn.textContent = "Remove product";
+//     addToCartBtn.textContent = "Add to cart"
+
+//         card.innerHTML = `<div>
+//     <img src="${product.imgUrl}" alt="${product.name}">
+//     </div>
+//     <div class="productDetail">
+//     <p>${product.name}</p>
+//     <p>${product.price}</p>
+//     </div> `;
+
+//     card.append(dltBtn);
+//     card.append(addToCartBtn)
+//     productList.append(card);
+// });
+
+// productList.addEventListener("click", (e) => {
+//     e.stopPropagation();
+
+//     const dltBtn = e.target;
+
+//     if (dltBtn.textContent === "Remove product" && dltBtn.tagName === "BUTTON") {
+//         dltBtn.closest(".singleProduct").remove();
+//     }
+
+//     console.log(dltBtn.closest(".singleProduct"));
+
+// });
